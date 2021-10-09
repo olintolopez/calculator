@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Olinto Lopez">
+    <meta name="description" content="The Odin Project Challenge. A basic calculator built using vanilla JS">
+    <meta name="keywords" content="HTML, CSS, responsive design, The Odin Project, Calculator">
+	<title>Odin Project | Basic Calculator</title>
+	<link rel="shortcut icon" href="./assets/img/calculator.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+</head>
+<body>
+
+	<div class="container-parent">
+		<div class="container__child">
+			<div class="calculator">
+				<div class="display">
+					<div class="calculator__nav">
+						<div class="calculator__nav_title">
+						  Maths<span class="calculator__nav_title_span">Calc</span>1.0
+						</div>
+						<div class="calculator_nav_right">
+						  <div class="help" data-open="modal1">
+							<i class="far fa-question-circle"></i>
+						  </div>
+						  <div class="history" data-open="modal2">
+							<i class="fas fa-history"></i>
+						  </div>
+						</div>
+				
+					  </div>
+					<div class="calculator-display">
+						<output class="user-input" type="text" id="user-input">0</output>	
+						<output class="result" type="text" id="result">&nbsp;</output>	
+					    <p class="warning"></p>
+					</div>
+										
+				</div>
+				<div class="all-buttons">
+					
+					<button class="clear" data-type="backspace" data-key="8"  id="Backspace" >Clr</button>
+					<button class="operators" id="exponent"><span>x<sup>y</sup></span></button>
+					<button class="percent" data-type="operator" id="remainder" >&#37</button>
+					<button class="operators" data-type="operator" id="divide">&#247</button>
+
+					<button class="digits" data-type="number" data-key="55" id="7">7</button>
+					<button class="digits" data-type="number" data-key="56" id="8">8</button>
+					<button class="digits" data-type="number" data-key="57" id="9">9</button>
+					<button class="operators" data-type="operator" id="plus" value="+" >&#43</button>
+					
+					<button class="digits" data-type="number" data-key="52" id="4">4</button>
+					<button class="digits" data-type="number" data-key="53" id="5">5</button>
+					<button class="digits" data-type="number" data-key="54" id="6">6</button>
+					<button class="operators" data-type="operator" data-key="189" id="minus">&#45</button>
+					
+					<button class="digits" data-type="number" data-key="49" id="1">1</button>
+					<button class="digits" data-type="number" data-key="50" id="2">2</button>
+					<button class="digits" data-type="number" data-key="51" id="3">3</button>
+					<button class="operators" data-type="operator" id="times">&#215</button>
+					
+					<button class="digits" data-type="number" data-key="48" id="0">0</button>
+					<button class="decimal" data-type="decimal" data-key="190" id="period">.</button>
+					<button type="button" class="sign" value="sign" data-key="192">+/-</button>
+					<button class="equals" data-type="equal" data-key="187" id="equals">&#61</button>
+				</div>
+				
+			</div>
+			
+		</div>
+	    <div class="footer">
+			<h1 class="credit"> 
+				Copyright ©  <span> The Odin </span> Project 2021 | created by <span> Olinto Lopez </span> 
+				<a id="author" target="_blank" href="https://github.com/olintolopez">
+				<i class="fab fa-github"></i>
+			</a> </h1>
+		</div>
+		<div class="modal" id="modal1">
+			<div class="modal-dialog">
+			  <header class="modal-header">
+				<div class="calculator__nav_title">
+				  <span class="calculator__nav_title_span"> MathCalc</span>1.0
+				</div>
+				<button class="close-modal" aria-label="close modal" data-close>
+				  ✕  
+				</button>
+			  </header>
+			  <section class="modal-content">
+				<ol>
+				  <li>
+					<strong>Press ✕ button, ESC of your keyboard, or click outside of the modal to close it</strong>
+				  </li>
+				  <li>
+					You can use the mouse to select a number, followed by an operator, then another number and finally you select the equal key to get the result.
+				  </li>
+				  <li>
+					If you get the ERROR MATH result on the screen where the result is displayed, you must use the Clr key to erase everything and start a new calculation.
+				  </li>
+				  <li>
+                    If you want to calculate a series of basic operations you can (as indicated above) select the digit followed by an operator, select the other digit and to continue the sequence select the other operator and then the next digit and so on at the end of the sequence select the equal key.  
+				  </li>
+				  <li>
+					You can use the keyboard of your pc to evaluate a sequence of basic operations. Next we have
+					<p>Keyboard support</p>
+					<div class="modal__btns">
+						<div class="all__buttons">
+						    <button class="digits">1</button> <i class="fa fa-arrow-right"></i>
+					        <button class="digits">9</button> to input numbers
+					    </div>
+						<div class="all__buttons">
+							<button class="operartors">+</button>
+							<button class="operators">-</button>
+							<button class="operators">*</button>
+							<button class="operators">/</button>
+							<button class="operators">^</button> to input operator
+							</div>
+						  <div class="all__buttons">
+							<button class="digits enter">Enter</button> <span class="enterOrEqual">or</span>   
+							<button class="operators">=</button> to evaluate
+						  </div>
+						  <div class="all__buttons">
+							<button class="digits enter">Backspace</button>
+							<button class="operators">c</button>
+							<button class="digits enter">Esc</button>to delete
+						  </div>
+					</div>
+				  </li>
+				  
+			  </ol>
+			  </section>
+			  <footer class="modal-footer">
+				<h1 class="credit"> 
+					Copyright ©  <span> The Odin </span> Project 2021 | created by <span> Olinto Lopez </span> 
+					<a id="author" target="_blank" href="https://github.com/olintolopez">
+					<i class="fab fa-github"></i>
+				</a> </h1>
+			  </footer>
+			</div>
+		</div>
+		<div class="modal" id="modal2">
+			<div class="modal-dialog">
+			  <header class="modal-header">
+				History of operations
+				<button class="removeHistory" id="removeHistory"><i class="fa fa-trash"></i> </button>
+					<button class="close-modal" aria-label="close modal" data-close>
+					  ✕  
+					</button>	
+			
+			  </header>
+			  <section class="modal-content">
+				<ol id="history"></ol>
+			  </section>
+			  <footer class="modal-footer">
+				<h1 class="credit"> 
+					Copyright ©  <span> The Odin </span> Project 2021 | created by <span> Olinto Lopez </span> 
+					<a id="author" target="_blank" href="https://github.com/olintolopez">
+					<i class="fab fa-github"></i>
+				</a> </h1>
+			  </footer>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./assets/js/modal.js"></script>
+	<script src="./assets/js/calculator.js"></script>
+</body>
+</html>
